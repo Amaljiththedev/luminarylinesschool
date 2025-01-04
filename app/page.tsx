@@ -1,7 +1,6 @@
-import Allfaves from "@/components/animata/background/Allfaves";
+
 import Hero from "@/components/ui/Animatedbeams";
-import { MovingLine } from "@/components/animata/background/moving";
-import { BackgroundCellAnimation } from "@/components/animata/background/BackgroundRippleeffect";
+
 
 export default function Home() {
   return (
