@@ -11,7 +11,7 @@ const Hero = () => (
       <div
         style={{
           background:
-            "background: radial-gradient(circle at center, #007f7f 0%, #004f4f 20%, rgba(0, 255, 255, 0) 60%)";
+            "background: radial-gradient(circle at center, #007f7f 0%, #004f4f 20%, rgba(0, 255, 255, 0) 60%);",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
