@@ -8,6 +8,16 @@ const Hero = () => (
       <div className="absolute inset-0">
         <Starfield />
       </div>
+      <div
+        style={{
+          background:
+            "radial-gradient(circle at center, #4a0979 0%, #5f0000 20%, rgba(139, 0, 255, 0) 60%)",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+        className="absolute inset-0 h-full w-full opacity-50"
+      />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6 -mt-32 sm:-mt-20">
         {/* Hero Content */}
         <p className="text-lg md:text-xl font-poppins mb-4 text-gray-300">
