@@ -38,15 +38,9 @@ export default function Navbar() {
           <li>
             <Link href="/contact" className="hover:text-gray-300 transition">Contact Us</Link>
           </li>
-          <div className="hidden md:block ml-12"> {/* Added margin-left for more space */}
-          <div className="group relative">
-            <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 opacity-75 blur transition duration-500 group-hover:opacity-100"></div>
-            <button className="relative rounded-lg bg-black px-7 py-4 text-white">
-              Join The Waitlist
-            </button>
-          </div>
-        </div>
+
         </ul>
+
 
         {/* CTA Button with increased gap */}
 
