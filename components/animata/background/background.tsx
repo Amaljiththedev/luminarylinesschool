@@ -9,8 +9,8 @@ import { useInView } from 'react-intersection-observer';
 // Background cell animation component
 export const BackgroundCellAnimation = () => {
   return (
-    <div className="relative h-screen bg-black justify-center overflow-hidden">
-      <BackgroundCellCore />
+    <div className="relative bg-black justify-center overflow-hidden">
+      <BackgroundCellCore/>
       <div className="relative z-50 pointer-events-none select-none">
         <div className="heading-component mt-8 mb-5">
           <motion.p
@@ -92,9 +92,9 @@ const BackgroundCellCore = () => {
     <div
       ref={ref}
       onMouseMove={handleMouseMove}
-      className="h-full absolute inset-0"
+      className="absolute inset-0"
     >
-      <div className="absolute h-[20rem] inset-y-0 overflow-hidden">
+      <div className="absolute h-[10rem] inset-y-0 overflow-hidden">
         <div className="absolute h-full w-full pointer-events-none -bottom-2 z-40 bg-transparent "></div>
         <div
           className="absolute inset-0 z-20 bg-transparent"

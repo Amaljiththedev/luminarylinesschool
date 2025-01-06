@@ -1,38 +1,31 @@
 import { BackgroundCellAnimation } from "@/components/animata/background/background";
+import { GlareCardDemo } from "@/components/animata/background/glarecard";
 import Hero from "@/components/ui/Animatedbeams";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
-      <header
-        className="relative w-full flex items-center justify-center overflow-hidden 
-        bg-[radial-gradient(50%_50%_at_50%_50%,#4a0979_0%,#5f0000_50%,rgba(139,0,255,0)_100%)]"
-        aria-label="Hero Section"
-      >
-        <Hero />
-      </header>
-
       {/* Main Content Section */}
       <main aria-label="Main Content">
-        <section className="relative -mt-10 w-full min-h-screen bg-black text-white">
-          {/* Background Animation */}
-          <div className="absolute inset-0">
+        {/* Hero Section */}
+        <section className="relative w-full bg-gradient-to-b from-purple-800 via-red-800 to-black text-white flex items-center justify-center -mb-44">
+          <Hero />
+        </section>
+
+        {/* BackgroundCellAnimation Section */}
+        <section className="relative w-full bg-black text-white flex items-center justify-center py-8">
+          <div className="relative z-10">
             <BackgroundCellAnimation />
           </div>
-
-          {/* Content */}
-
         </section>
-        <section className="relative -mt-60 w-full min-h-screen bg-black text-white">
-          {/* Background Animation */}
 
-
-          {/* Content */}
-
+        {/* GlareCardDemo Section */}
+        <section className="relative w-full bg-black text-white flex items-center justify-center py-16">
+          <div className="relative z-10">
+            <GlareCardDemo />
+          </div>
         </section>
       </main>
     </>
   );
 }
-

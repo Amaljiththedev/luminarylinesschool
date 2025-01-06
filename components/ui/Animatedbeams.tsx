@@ -14,7 +14,7 @@ const Hero = () => (
       <div
         style={{
           background:
-            "radial-gradient(circle at center,   rgba(0, 34, 64, 1) 0%,rgba(0, 23, 50, 1) 30%,rgba(0, 0, 0, 0) 70%)",
+            "radial-gradient(circle at center, rgba(64, 0, 0, 1) 0%, rgba(50, 0, 0, 1) 30%, rgba(20, 0, 0, 0) 70%);",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
@@ -67,11 +67,7 @@ const Hero = () => (
       </div>
     </div>
 
-    {/* Transition Divider */}
-    <div
-      className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent"
-      style={{ zIndex: 15 }}
-    ></div>
+
   </div>
 );
 

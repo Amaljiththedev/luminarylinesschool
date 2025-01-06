@@ -38,10 +38,10 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8"> {/* Grid setup with responsive columns and spacing */}
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6"> {/* Grid setup with responsive spacing */}
       {items.map((item) => (
         <div
-          className="relative group mb-12" // Increased space between items (larger bottom margin)
+          className="relative group mb-6 sm:mb-8" // Smaller bottom margin
           key={item.name}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -66,24 +66,24 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: "nowrap",
                 }}
-                className="absolute -top-28 -left-1/2 translate-x-1/2 flex text-lg flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-8 py-4" // Larger padding and font size, adjusted tooltip position
+                className="absolute -top-20 -left-1/2 translate-x-1/2 flex text-sm flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2 sm:px-6 sm:py-3" // Smaller tooltip with compact padding
               >
-                <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
-                <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-                <div className="font-bold text-white relative z-30 text-xl"> {/* Larger font size */}
+                <div className="absolute inset-x-5 z-30 w-[15%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
+                <div className="absolute left-5 w-[25%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
+                <div className="font-bold text-white relative z-30 text-base sm:text-lg"> {/* Adjusted font sizes */}
                   {item.name}
                 </div>
-                <div className="text-white text-sm">{item.designation}</div> {/* Larger text */}
+                <div className="text-white text-xs sm:text-sm">{item.designation}</div> {/* Smaller text */}
               </motion.div>
             )}
           </AnimatePresence>
           <Image
             onMouseMove={handleMouseMove}
-            height={140} // Larger image size
-            width={140} // Larger image size
+            height={80} // Smaller image size for mobile
+            width={80} // Smaller image size for mobile
             src={item.image}
             alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-32 w-32 border-2 group-hover:scale-110 group-hover:z-30 border-white relative transition duration-500" // Reverted to rounded image and hover effect
+            className="object-cover !m-0 !p-0 object-top rounded-full h-20 w-20 sm:h-24 sm:w-24 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500" // Adjusted hover scale and size
           />
         </div>
       ))}
